@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptadora</title>
+</head>
+<body>
+    <header>
+        <img src="imágenes/Alura.png" alt="Logo" class="logo">
+        <p>
+            Reto Alura: Encriptador de texto
+        </p>
+    </header>
+
+    <main>
+
+        <section class="textoAEncriptar">
+
+            <textarea cols="30" rows="10" class="textoNoModificado" id="textoNoModificado" placeholder="Ingrese un texto aquí"></textarea>
+            <div class="condiciones">
+                <p>Solo letras minúsculas y sin acentos</p>
+            </div>
+
+            <div class="botones">
+                <button class="btn-encriptar">Encriptar</button>
+                <button class="btn-desencriptar">Desencriptar</button>
+            </div>
+        </section>
+
+        <section class="textoModificado">
+            <textarea cols="20" rows="30" placeholder="No se encontró ningún texto" class="textoYaModificado" id="textoYaModificado" readonly></textarea>
+            <div class="boton">
+                <button class="copiar">Copiar</button>
+            </div>
+        </section>
+    </main>
+
+    <div class="ventanaEmergente" id="ventanaEmergente">
+        <div class="contenidoEmergente" id="contenidoEmergente">
+            <span class="cerrarEmergente" id="cerrarEmergente">&times;</span>
+            <p id="mensajeEmergente"></p>
+        </div>
+    </div>
+    
+    <footer>
+        &copy: 2024 Hugu34
+    </footer>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</body>
+</html>
