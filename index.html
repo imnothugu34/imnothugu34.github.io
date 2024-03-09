@@ -14,9 +14,7 @@
     </header>
 
     <main>
-
         <section class="textoAEncriptar">
-
             <textarea cols="30" rows="10" class="textoNoModificado" id="textoNoModificado" placeholder="Ingrese un texto aquí"></textarea>
             <div class="condiciones">
                 <p>Solo letras minúsculas y sin acentos</p>
@@ -29,23 +27,27 @@
         </section>
 
         <section class="textoModificado">
-            <textarea cols="20" rows="30" placeholder="No se encontró ningún texto" class="textoYaModificado" id="textoYaModificado" readonly></textarea>
+            <textarea cols="20" rows="30" placeholder="Su texto aparecerá aquí" class="textoYaModificado" id="textoYaModificado" readonly></textarea>
             <div class="boton">
                 <button class="copiar">Copiar</button>
             </div>
         </section>
     </main>
-
-    <div class="ventanaEmergente" id="ventanaEmergente">
-        <div class="contenidoEmergente" id="contenidoEmergente">
-            <span class="cerrarEmergente" id="cerrarEmergente">&times;</span>
-            <p id="mensajeEmergente"></p>
-        </div>
-    </div>
     
     <footer>
-        &copy: 2024 Hugu34
+        <p>&copy: 2024 Hugu34</p>
     </footer>
+    <div class="ventanaEmergente inactive" id="ventanaEmergente">
+        <div class="fondo"></div>
+        <div class="contenidoEmergente">
+            <div class="imagen"></div>
+            <div class="textoEmergente">
+                <h1 id="titulo"></h1>
+                <p id="textoEmergente"></p>
+            </div>
+        <a id="cerrarEmergente" class="cerrarEmergente" href="#">X</a>
+        </div>
+    </div>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </body>
