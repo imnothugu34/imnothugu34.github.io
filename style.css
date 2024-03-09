@@ -423,7 +423,7 @@ footer{
 /*Responsive*/
 @media(max-width: 760px){
     body::before{
-        heigth: 120vh;
+        heigth: 180vh;
     }
     main{
         flex-direction: column;
