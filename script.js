@@ -21,7 +21,6 @@ const ventanaEmergente = document.getElementById("ventanaEmergente");
 const textoEmergente = document.getElementById("textoEmergente");
 const cerrarEmergente = document.getElementById("cerrarEmergente");
 const titulo = document.getElementById("titulo");
-let esEncriptado;
 
 btnEncriptar.addEventListener("click", encriptación);
 function encriptación(){
@@ -38,7 +37,6 @@ function encriptación(){
 
     const textoEncriptado = encriptarTexto(texto);
     textarea2.value = `El texto encriptado es: ${textoEncriptado}`;
-    esEncriptado = true;
 }
 
 function esVálidoTodo(texto){
@@ -57,12 +55,11 @@ function desEncriptación(){
         return;
     }
     if(!esVálidoTodo(texto)){
-        mostrarVentanaEmergente("Carácter no válido encontrado", "Solo letras minúsculas, no mayúsculas, no acentos, no caracteres especiales, no números");
+        mostrarVentanaEmergente("Carácter no válido encontrado", "No mayúsculas, no acentos, no caracteres especiales, no números");
         return;
     }
     const textoDesEncriptado = desencriptarTexto(texto);
     textarea2.value = `El texto desencriptado es: ${textoDesEncriptado}`;
-    esEncriptado = false;
 }
 
 function desencriptarTexto(texto){
@@ -91,19 +88,16 @@ function copiarTexto(){
         mostrarVentanaEmergente("No se encontró ningún texto", "Encripte o desencripte primero");
         return;
     }
-    textoCopiado = textoCopiado.split("");
-    let textoACopiar = "";
-    for(let i = esEncriptado ? 24 : 27; i < textoCopiado.length; i++){
-        textoACopiar += textoCopiado[i];
-    }
-
+    textoCopiado = textoCopiado.split(": ");
+    console.log(textoCopiado);
+    const textoACopiar = textoCopiado[1];
     navigator.clipboard.writeText(textoACopiar)
     .then(() => {
         mostrarVentanaEmergente("Operación exitosa", "Texto copiado al portapapeles");
     })
     .catch(err => {
         console.error('Error al copiar el texto: ', err);
-        mostrarVentanaEmergente("Operación no exitosa", "Error al copiar el texto. Por favor, cópielo manualmente.");
+        mostrarVentanaEmergente("Operación fallida", "Error al copiar el texto. Por favor, cópielo manualmente.");
     });
 
     textarea1.value = "";
