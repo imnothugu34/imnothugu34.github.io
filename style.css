@@ -422,9 +422,6 @@ footer{
 
 /*Responsive*/
 @media(max-width: 760px){
-    body::before{
-        height: 200vh;
-    }
     main{
         flex-direction: column;
         align-items: center;
