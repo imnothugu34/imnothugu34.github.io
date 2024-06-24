@@ -61,7 +61,13 @@
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    width: clamp(500px, 2vw, 100%);
+    width: clamp(350px, 2vw, 100%);
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+
+#portafolio > div > img{
+    width: 50%;
     flex-grow: 1;
 }
 
