@@ -1,0 +1,32 @@
+{
+    "facebook": {
+        "claseIcono": "bi bi-facebook",
+        "nombreIcono": "Facebook",
+        "redirección": "https://www.facebook.com/Hugu34"
+    },
+    "whatsapp": {
+        "claseIcono": "bi bi-whatsapp",
+        "nombreIcono": "WhatsApp",
+        "redirección": "https://api.whatsapp.com/send?phone=9931192563&text=Hola%2C%20me%20interesan%20sus%20trabajos.%20¿Podría%20darme%20más%20información%20al%20respecto%3F"
+    },
+    "linkedin": {
+        "claseIcono": "bi bi-linkedin",
+        "nombreIcono": "LinkedIn",
+        "redirección": "https://www.linkedin.com/in/jaziel-abraham-sol%C3%ADs-real-922774313/"
+    },
+    "instagram": {
+        "claseIcono": "bi bi-instagram",
+        "nombreIcono": "Instagram",
+        "redirección": "https://www.instagram.com/_hugu34/"
+    },
+    "youtube": {
+        "claseIcono": "bi bi-youtube",
+        "nombreIcono": "YouTube",
+        "redirección": "https://www.youtube.com/channel/UCLAHRcMrRrd954YMVAf9jjQ"
+    },
+    "gmail": {
+        "claseIcono": "bi bi-envelope-at-fill",
+        "nombreIcono": "Gmail",
+        "redirección": ""
+    }
+}

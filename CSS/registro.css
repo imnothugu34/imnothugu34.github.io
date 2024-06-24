@@ -1,0 +1,184 @@
+body{
+    background: #f2f2f2;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    background: linear-gradient(145deg, #d4d4d4, #f0f0f0);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.container > div{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.container > div > h2{
+    color: #000000b3;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: clamp(24px, 4vw, 50px);
+}
+
+.container > div > p{
+    font-size: clamp(16px, 4vw, 30px);
+}
+
+form{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    align-items: flex-start;
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-grow: 1;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset legend{
+    font-weight: bold;
+    color: #333333;
+}
+
+fieldset label{
+    width: 100%;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: #555555;
+}
+
+fieldset input, fieldset select{
+    padding: 10px;
+    border: 1px solid #888888;
+    border-radius: 5px;
+    background: #f9f9f9;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+fieldset input:focus, fieldset select:focus{
+    outline: 0;
+    border: 1px solid #444444; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+}
+
+.importante::after{
+    content: '*';
+    color: #f00;
+}
+
+.otras-acciones{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.otras-acciones label{
+    display: flex;
+    gap: 5px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    cursor: pointer;
+    align-items: center;
+}
+
+.otras-acciones h2{
+    font-weight: bold;
+    color: #333333;
+    font-size: clamp(12px, 2vw, 25px);
+}
+
+.otras-acciones h2 a{
+    color: #007BFF; 
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.otras-acciones h2 a:hover{
+    color: #0056b3; 
+}
+
+.otras-acciones input{
+    appearance: none;
+    width: 57px;
+    height: 28.2px;
+    border-radius: 100px;
+    background-color: #979797;
+    position: relative;
+    transition: background-color .2s linear;
+    cursor: pointer;
+}
+
+.otras-acciones input::after{
+    content: '';
+    width: 20px;
+    height: 20px;
+    display: block;
+    border-radius: 100px;
+    background-color: #eee;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: left .2s linear;
+}
+
+.otras-acciones input:checked{
+    background-color: #00c881;
+}
+
+.otras-acciones input:checked::after{
+    left: 33px;
+}
+
+.otras-acciones button{
+    padding: 5px;
+    min-width: 100px;
+    width: 25%;
+    border: 0;
+    border-radius: 5px;
+    text-transform: uppercase;
+    background-color: #13375d;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.otras-acciones button:disabled{
+    background-color: #979797;
+}
+
+/* .otras-acciones button:hover{
+    
+} */

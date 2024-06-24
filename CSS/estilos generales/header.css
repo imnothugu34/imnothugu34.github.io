@@ -1,0 +1,151 @@
+nav{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.mostrar-menu, .esconder-menu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+
+.mostrar-menu{
+    order: 1;
+}
+
+#check{
+    display: none;
+}
+
+.redes-sociales{
+    background-color: #9d9d9d;
+    padding: 10px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.redes-sociales .icon-social-media{
+    cursor: pointer;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.redes-sociales .icon-social-media span:first-child{
+    font-size: 20px;
+    display: inline-block;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.redes-sociales .icon-social-media span:last-child{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+}
+
+.redes-sociales .icon-social-media span{
+    transition: transform 0.2s ease-out;
+}
+
+.redes-sociales .icon-social-media:hover span:first-child{
+    transform: translateY(100%);
+}
+
+.redes-sociales .icon-social-media:hover span:last-child{
+    transform: none;
+}
+
+.redes-sociales i{
+    scale: 1.5;
+}
+
+.menu{
+    background-color: #34495E;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nombre-empresa{
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: fit-content;
+    width: 25%;
+    text-align: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+h2{
+    font-size: 20px;
+}
+
+p{
+    font-size: 15px;
+}
+
+.navegacion{
+    text-transform: uppercase;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+.navegacion a{
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+.navegacion a::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+}
+
+.navegacion a:hover::before{
+    transform: scaleX(1);
+}
+
+@media(width <= 630px){
+    /* .menu{
+
+    } */
+}

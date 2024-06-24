@@ -1,0 +1,64 @@
+{
+    "productos": [
+        {
+            "img": "https://www.grupohm.mx/products/0000_producto_intro/estructuras_metalicas.jpg",
+            "descripción": "Somos especialistas en Estructuras Metálicas para proyectos de construcción.",
+            "nombre": "Estructuras Metálicas"
+        },
+        {
+            "img": "https://www.grupohm.mx/products/0000_producto_intro/portones.jpg",
+            "descripción": "Portones Industriales, Empresariales y Residenciales.",
+            "nombre": "Portones"
+        },
+        {
+            "img": "https://www.grupohm.mx/products/0000_producto_intro/domos.jpg",
+            "descripción": "Domos Industriales, Empresariales y Residenciales.",
+            "nombre": "Domos"
+        },
+        {
+            "img": "https://www.grupohm.mx/products/0000_producto_intro/puentes_peatonales.jpg",
+            "descripción": "Productos Puentes Peatonales e Industriales.",
+            "nombre": "Puentes Peatonales"
+        },
+        {
+            "img": "https://www.grupohm.mx/products/0000_producto_intro/entrepisos_metalicos.jpg",
+            "descripción": "Entrepisos o entreplantas Metálicas.",
+            "nombre": "Entrepisos Metálicos"
+        },
+        {
+            "img": "https://www.grupohm.mx/products/0000_producto_intro/herrajes.jpg",
+            "descripción": "Herrajes para Vidrios.",
+            "nombre": "Herrajes para Vidrios"
+        },
+        {
+            "img": "https://www.grupohm.mx/products/0000_producto_intro/naves_industriales.jpg",
+            "descripción": "Naves Industriales y Bodegas.",
+            "nombre": "Naves Industriales"
+        },
+        {
+            "img": "https://www.grupohm.mx/products/0000_producto_intro/transfers_clinicos.jpg",
+            "descripción": "Realizamos transfers Clínicos u hospitalarios para ingreso al área de quirófanos",
+            "nombre": "Transfers Clínicos"
+        },
+        {
+            "img": "https://www.grupohm.mx/products/0000_producto_intro/herreria_en_general.jpg",
+            "descripción": "Realizamos Herrería en General y trabajamos con nuestros clientes para crear y proporcionar un diseño funcional y elegante.",
+            "nombre": "Herrería en General"
+        },
+        {
+            "img": "https://www.grupohm.mx/products/0000_producto_intro/renovado_llantas.jpg",
+            "descripción": "Productos para renovado o reencauchado de llantas o neumáticos.",
+            "nombre": "Renovado de Llantas"
+        },
+        {
+            "img": "https://www.grupohm.mx/products/0000_producto_intro/deflectores.jpg",
+            "descripción": "Productos Deflectores de Viento para Hoteles y Villas.",
+            "nombre": "Deflectores de Viento"
+        },
+        {
+            "img": "https://www.grupohm.mx/products/0000_producto_intro/barandales.jpg",
+            "descripción": "Barandales, Pasamanos para Hoteles y Arquitectónicos",
+            "nombre": "Barandales y Pasamanos"
+        }
+    ]
+}

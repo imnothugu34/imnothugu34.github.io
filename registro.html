@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="website icon" href="./imgs/logo.png" type="png">
+    <title>Productos</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="container">
+            <div>
+                <h2>Bienvenido al apartado para registrarte</h2>
+                <p>Por favor ingresa los datos correspondientes que se solicitan en el siguiente formulario</p>
+            </div>
+            <form action="">
+                <fieldset class="datos-personales">
+                    <legend>Datos personales</legend>
+                    <label>
+                        <span class="importante">Apellido paterno </span>
+                        <input type="text" name="apellidoPaterno" required placeholder="Solís">
+                    </label>
+                    <label>
+                        <span class="importante">Apellido materno </span>
+                        <input type="text" name="apellidoMaterno" required placeholder="Real">
+                    </label>
+                    <label>
+                        <span class="importante">Nombre(s) </span>
+                        <input type="text" name="nombre" required placeholder="Jaziel Abraham">
+                    </label>
+                    <label>
+                        Género
+                        <select name="genero">
+                            <option value="masculino">Masculino</option>
+                            <option value="femenino">Femenino</option>
+                            <option value="otro">Otro</option>
+                            <option value="prefieroNoDecir">Prefiero no decir</option>
+                        </select>
+                    </label>
+                </fieldset>
+                <fieldset class="informacion-de-registro">
+                    <legend>Información de registro</legend>
+                    <label>
+                        <span class="importante">Correo electrónico </span>
+                        <input type="email" name="correo" required placeholder="example@dominio">
+                    </label>
+                    <label>
+                        <span>Número de teléfono </span>
+                        <input type="tel" name="telefono" placeholder="9314309265">
+                    </label>
+                </fieldset>
+                <fieldset class="datos-de-usuario">
+                    <legend>Datos de usuario</legend>
+                    <label>
+                        <span class="importante">Nombre de usuario </span>
+                        <input type="text" name="usuario" required placeholder="Hugu34">
+                    </label>
+                    <label>
+                        <span class="importante">Contraseña (mínimo 8 caracteres) </span>
+                        <input type="password" name="contraseña" required placeholder="***********">
+                    </label>
+                    <label>
+                        <span class="importante">Confirmar contraseña </span>
+                        <input type="password" name="confirmarContraseña" required placeholder="***********">
+                    </label>
+                </fieldset>
+                <section class="otras-acciones">
+                    <label>
+                        <input type="checkbox" name="términos" required>
+                        <h2 class="importante">He leído y aceptado los <a href="terminosYCondiciones.html">términos y condiciones</a> </h2>
+                    </label>
+                    <button type="submit" id="enviar" disabled>Enviar</button>
+                    <h2>
+                        ¿Ya tienes una cuenta?
+                        <a href="./inicioSesion.html">¡Inicia sesión aquí!</a>
+                    </h2>
+                    <h3>Los campos con "<span class="importante"></span>" son obligatorios</h3>
+                </section>
+            </form>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="./JS/componentes reciclables/header.js"></script>
+    <script src="./JS/componentes reciclables/footer.js"></script>
+    <link rel="stylesheet" href="./CSS/estilos generales/style.css">
+    <link rel="stylesheet" href="./CSS/estilos generales/footer.css">
+    <link rel="stylesheet" href="./CSS/estilos generales/header.css">
+    <link rel="stylesheet" href="./CSS/registro.css">
+    <script src="./JS/registro.js"></script>
+</body>
+</html>
