@@ -1,0 +1,81 @@
+body{
+    background: #f2f2f2;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+h3 {
+    font-size: clamp(24px, 4vw, 50px);
+    color: #000000b3;
+}
+
+.container{
+    padding: 20px;
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.container > div{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.container > div > h2{
+    color: #000000b3;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: clamp(24px, 4vw, 50px);
+}
+
+.no-trabajos h2{
+    font-size: clamp(24px, 4vw, 60px);
+    text-align: center;
+}
+
+section.trabajos{
+    flex-grow: 0.5;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.trabajo{
+    width: clamp(300px, 100%, 1000px);
+    display: flex;
+    border-radius: 15px;
+    border: 2px solid #000;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 10px;
+}
+
+.trabajo h2{
+    font-size: clamp(24px, 4vw, 40px);
+}
+
+.trabajo p{
+    font-size: clamp(16px, 2vw, 30px);
+}
+
+.producto-finalizado{
+    width: clamp(100px, 100%, 500px);
+    align-self: center;
+}

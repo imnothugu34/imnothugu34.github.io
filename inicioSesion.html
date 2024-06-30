@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="website icon" href="./imgs/logo.png" type="png">
+    <link rel="stylesheet" href="./CSS/estilos generales/style.css">
+    <link rel="stylesheet" href="./CSS/estilos generales/footer.css">
+    <link rel="stylesheet" href="./CSS/estilos generales/header.css">
+    <link rel="stylesheet" href="./CSS/inicioSesion.css">
     <title>Inicio de sesión</title>
 </head>
 <body>
@@ -19,13 +23,13 @@
                     <legend>Datos de usuario</legend>
                     <label>
                         Nombre de usuario
-                        <input type="text" name="usuario" placeholder="Hugu34">
+                        <input type="text" name="usuario" placeholder="Hugu34" required>
                     </label>
                     <label>
                         Contraseña
-                        <input type="password" name="contraseña" placeholder="***********">
+                        <input type="password" name="contraseña" placeholder="***********" required>
                     </label>
-                    <button type="submit" id="enviar">Enviar</button>
+                    <button type="submit" id="enviar" disabled>Enviar</button>
                 </fieldset>
                 <fieldset class="otras-acciones">
                     <legend>Otras opciones</legend>
@@ -44,9 +48,6 @@
     <footer></footer>
     <script src="./JS/componentes reciclables/header.js"></script>
     <script src="./JS/componentes reciclables/footer.js"></script>
-    <link rel="stylesheet" href="./CSS/estilos generales/style.css">
-    <link rel="stylesheet" href="./CSS/estilos generales/footer.css">
-    <link rel="stylesheet" href="./CSS/estilos generales/header.css">
-    <link rel="stylesheet" href="./CSS/inicioSesion.css">
+    <script src="./JS/inicioSesion.js"></script>
 </body>
 </html>

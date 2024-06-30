@@ -163,9 +163,9 @@ fieldset input:focus, fieldset select:focus{
 }
 
 .otras-acciones button{
-    padding: 5px;
-    min-width: 100px;
-    width: 25%;
+    padding: 10px;
+    width: clamp(100px, 50%, 250px);
+    aspect-ratio: 5/1;
     border: 0;
     border-radius: 5px;
     text-transform: uppercase;
@@ -173,6 +173,7 @@ fieldset input:focus, fieldset select:focus{
     color: #fff;
     font-weight: bold;
     cursor: pointer;
+    font-size: clamp(16px, 4vw, 24px);
 }
 
 .otras-acciones button:disabled{

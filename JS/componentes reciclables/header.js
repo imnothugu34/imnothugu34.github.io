@@ -24,7 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
         return $a;
     }
 
-    const isLogIn = false;
+    // const isLogIn = true;
+    // const isAdministrator = true;
 
     const $redesSociales = document.createElement('section');
     $redesSociales.classList.add('redes-sociales');
@@ -61,12 +62,15 @@ document.addEventListener('DOMContentLoaded', () => {
     $navegacion.appendChild(Anchor('../../portafolio.html', 'Portafolio'));
     $navegacion.appendChild(Anchor('../../productos.html', 'Productos'));
 
-    if(isLogIn){
-        $navegacion.appendChild(Anchor('../../agendarCita.html', 'Agendar cita'));
-        $navegacion.appendChild(Anchor('../../citas.html', 'Mis citas'));
-    }else{
-        $navegacion.appendChild(Anchor('../../inicioSesion.html', 'Iniciar sesión'));
-    }
+    // if(!isLogIn){
+    $navegacion.appendChild(Anchor('../../inicioSesion.html', 'Iniciar sesión'));
+    // }else{
+        // if(isAdministrator){
+    $navegacion.appendChild(Anchor('../../administrador.html', 'Administrador'))
+        // }
+    $navegacion.appendChild(Anchor('../../agendarCita.html', 'Agendar cita'));
+    $navegacion.appendChild(Anchor('../../citas.html', 'Mis citas'));
+    //}
 
     $menu.appendChild($nombreEmpresa);
     $menu.appendChild($navegacion);

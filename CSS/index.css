@@ -145,6 +145,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
     padding: 10px;
@@ -157,6 +158,9 @@
     align-items: center;
     gap: 1rem;
     flex-grow: 1;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
 }
 
 .nuestros-numeros p{
@@ -220,6 +224,10 @@
 
 #productos img:hover{
     transform: scale(1.05);
+}
+
+.empresa{
+    padding: 20px;
 }
 
 .empresa p{

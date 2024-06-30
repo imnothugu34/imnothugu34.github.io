@@ -4,22 +4,628 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="website icon" href="./imgs/logo.png" type="png">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./CSS/estilos generales/footer.css">
+    <link rel="stylesheet" href="./CSS/estilos generales/style.css">
+    <link rel="stylesheet" href="./CSS/estilos generales/header.css">
+    <link rel="stylesheet" href="./CSS/agendarCita.css">
     <title>Agendar cita</title>
 </head>
 <body>
     <header></header>
     <main>
         <div class="container">
-            <form action="">
-                
+            <div>
+                <h2>Bienvenido a la sección de agendar cita</h2>
+                <p>Aquí podrás seleccionar el tipo de trabajo que requieras y el método de pago que te gustaría usar</p>
+            </div>
+            <form action="" method="post">
+                <fieldset class="seleccion-servicio">
+                    <legend>Selección de servicio</legend>
+                    <label>
+                        Selección del producto
+                        <select name="producto" required>
+                            <option value="estructuraMetalica">
+                                Estructura metálica
+                            </option>
+                            <option value="porton">
+                                Porton
+                            </option>
+                            <option value="domo">
+                                Domo
+                            </option>
+                            <option value="puentePeatonal">
+                                Puente peatonal
+                            </option>
+                            <option value="entrepisoMetalico">
+                                Entrepiso metálico
+                            </option>
+                            <option value="herrajeVidrio">
+                                Herraje para vidrio
+                            </option>
+                            <option value="naveIndustrial">
+                                Nave industrial
+                            </option>
+                            <option value="transferClinico">
+                                Transfer clínico
+                            </option>
+                            <option value="herreria">
+                                Herrería en general
+                            </option>
+                            <option value="renovadoLlanta">
+                                Renovado de llanta
+                            </option>
+                            <option value="deflectorViento">
+                                Deflector de viento
+                            </option>
+                            <option value="barandal">
+                                Barandal
+                            </option>
+                            <option value="pasamano">
+                                Pasamano
+                            </option>
+                        </select>
+                    </label>
+                    <section class="especificacion-producto">
+                        <div class="estructuraMetalica">
+                            <fieldset>
+                                <legend>Información de la estructura metálica</legend>
+                                <label>
+                                    Largo (en m)
+                                    <input type="number" name="emLargo" min="0">
+                                </label>
+                                <label>
+                                    Ancho (en m)
+                                    <input type="number" name="emAncho" min="0">
+                                </label>
+                                <label>
+                                    Alto (en m)
+                                    <input type="number" name="emAlto" min="0">
+                                </label>
+                                <label>
+                                    Tipo de metal
+                                    <select name="emTipoMetal">
+                                        <option value="acero">Acero</option>
+                                        <option value="hierro">Hierro</option>
+                                        <option value="aluminio">Aluminio</option>
+                                        <option value="cobre">Cobre</option>
+                                        <option value="titanio">Titanio</option>
+                                    </select>
+                                </label>
+                                <label>
+                                    Espesor del metal (en mm)
+                                    <input type="number" name="emEspesorMetal" min="0">
+                                </label>
+                                <label>
+                                    Acabado
+                                    <input type="text" name="emAcabado">
+                                </label>
+                                <label>
+                                    Carga soportada (en kg)
+                                    <input type="number" name="emCargaSoportada" min="0">
+                                </label>
+                            </fieldset>
+                        </div>
+                        <div class="porton hidden">
+                            <fieldset>
+                                <legend>Información del portón</legend>
+                                <label>
+                                    Ancho (en m)
+                                    <input type="number" name="porAlto" min="0">
+                                </label>
+                                <label>
+                                    Alto (en m)
+                                    <input type="number" name="" min="0">
+                                </label>
+                                <label>
+                                    Tipo de apertura
+                                    <select name="porTipoApertura">
+                                        <option value="corredizo">Corredizo</option>
+                                        <option value="abatible">Abatible</option>
+                                        <option value="levadizo">Levadizo</option>
+                                        <option value="plegadizo">Plegadizo</option>
+                                    </select>
+                                </label>
+                                <label>
+                                    Material
+                                    <input type="text" name="porMaterial">
+                                </label>
+                                <label>
+                                    Color
+                                    <input type="color" name="porColor">
+                                </label>
+                                <label>
+                                    Tipo de protección
+                                    <select name="porSeguridad">
+                                        <optgroup label="Cerraduras">
+                                            <option value="cerraduraSobrepuesto">Sobrepuesta</option>
+                                            <option value="cerraduraEmbutido">Embutida</option>
+                                            <option value="cerraduraSeguro">De seguridad</option>
+                                            <option value="cerraduraMultipunto">Multipunto</option>
+                                        </optgroup>
+                                        <optgroup label="Cerrojos">
+                                            <option value="cerrojoSeguro">De seguridad</option>
+                                        </optgroup>
+                                    </select>
+                                </label>
+                            </fieldset>
+                        </div>
+                        <div class="domo hidden">
+                            <fieldset>
+                                <legend>Información del domo</legend>
+                                <label>
+                                    Diámetro (en m)
+                                    <input type="number" name="domoDiametro" min="0">
+                                </label>
+                                <label>
+                                    Material
+                                    <input type="text" name="domoMaterial">
+                                </label>
+                                <label>
+                                    Transparencia
+                                    <select name="domoTransparencia">
+                                        <option value="translucido">Translúcido</option>
+                                        <option value="opaco">Opaco</option>
+                                    </select>
+                                </label>
+                                <label>
+                                    Tipo de apertura
+                                    <select name="domoTipoApertura">
+                                        <option value="fijo">Fijo</option>
+                                        <option value="abatible">Abatible</option>
+                                    </select>
+                                </label>
+                            </fieldset>
+                        </div>
+                        <div class="puentePeatonal hidden">
+                            <fieldset>
+                                <legend>Información del puente peatonal</legend>
+                                <label>
+                                    Longitud (en m)
+                                    <input type="number" name="ppLongitud" min="0">
+                                </label>
+                                <label>
+                                    Ancho (en m)
+                                    <input type="number" name="ppAncho" min="0">
+                                </label>
+                                <label>
+                                    Capacidad de carga (en kg)
+                                    <input type="number" name="ppCarga" min="0">
+                                </label>
+                                <label>
+                                    Material de la estructura
+                                    <input type="text" name="ppMaterial">
+                                </label>
+                                <label>
+                                    Tipo de barandales
+                                    <input type="text" name="ppBarandales">
+                                </label>
+                            </fieldset>
+                        </div>
+                        <div class="entrepisoMetalico hidden">
+                            <fieldset>
+                                <legend>Información del entrepiso metálico</legend>
+                                <label>
+                                    Largo (en m)
+                                    <input type="number" name="emLargo" min="0">
+                                </label>
+                                <label>
+                                    Ancho (en m)
+                                    <input type="number" name="emAncho" min="0">
+                                </label>
+                                <label>
+                                    Alto (en m)
+                                    <input type="number" name="emAlto" min="0">
+                                </label>
+                                <label>
+                                    Capacidad de carga (en kg)
+                                    <input type="number" name="emCarga" min="0">
+                                </label>
+                                <label>
+                                    Tipo de suelo
+                                    <input type="text" name="emSuelo">
+                                </label>
+                                <label>
+                                    Revestimiento del metal
+                                    <input type="text" name="emRevestimiento">
+                                </label>
+                            </fieldset>
+                        </div>
+                        <div class="herrajeVidrio hidden">
+                            <fieldset>
+                                <legend>Información del herraje para vidrio</legend>
+                                <label>
+                                    Tipo de vidrio
+                                    <select name="hvTipoVidrio">
+                                        <option value="templado">Templado</option>
+                                        <option value="laminado">Laminado</option>
+                                    </select>
+                                </label>
+                                <label>
+                                    Espesor del vidrio (en mm)
+                                    <input type="number" name="hvEspesorVidrio" min="0">
+                                </label>
+                                <label>
+                                    Tipo de herraje
+                                    <input type="text" name="hvTipoHerraje">
+                                </label>
+                                <label>
+                                    Acabado del herraje
+                                    <input type="text" name="hvAcabadoHerraje">
+                                </label>
+                            </fieldset>
+                        </div>
+                        <div class="naveIndustrial hidden">
+                            <fieldset>
+                                <legend>Información de la nave industrial</legend>
+                                <label>
+                                    Superficie (en m²)
+                                    <input type="number" name="niSuperficie" min="0">
+                                </label>
+                                <label>
+                                    Altura (en m)
+                                    <input type="number" name="niAltura" min="0">
+                                </label>
+                                <label>
+                                    Tipo de estructura
+                                    <input type="text" name="niTipoEstructura">
+                                </label>
+                                <label>
+                                    Aislamiento térmico
+                                    <input type="text" name="niAislamientoTermico">
+                                </label>
+                                <label>
+                                    Ventilación
+                                    <input type="text" name="niVentilacion">
+                                </label>
+                            </fieldset>
+                        </div>
+                        <div class="transferClinico hidden">
+                            <fieldset>
+                                <legend>Información del transfer clínico</legend>
+                                <label>
+                                    Capacidad de carga (en kg)
+                                    <input type="number" name="tcCapacidadCarga" min="0">
+                                </label>
+                                    <label>
+                                        Largo (en m)
+                                        <input type="number" name="tcLargo" min="0">
+                                    </label>
+                                    <label>
+                                        Ancho (en m)
+                                        <input type="number" name="tcLargo" min="0">
+                                    </label>
+                                    <label>
+                                        Alto(en m)
+                                        <input type="number" name="tcLargo" min="0">
+                                    </label>
+                                <label>
+                                    Material
+                                    <input type="text" name="tcMaterial">
+                                </label>
+                                <label>
+                                    Tipo de ruedas
+                                    <input type="text" name="tcTipoRuedas">
+                                </label>
+                                <label>
+                                    Características adicionales
+                                    <input type="text" name="tcCaracteristicas">
+                                </label>
+                            </fieldset>
+                        </div>
+                        <div class="herreria hidden">
+                            <fieldset>
+                                <legend>Información de herrería en general</legend>
+                                <label>
+                                    Descripción del trabajo requerido
+                                    <textarea name="hgDescripcion"></textarea>
+                                </label>
+                                <label>
+                                    Largo (en cm)
+                                    <input type="text" name="hgLargo" min="0">
+                                </label>
+                                <label>
+                                    Ancho (en cm)
+                                    <input type="number" name="hgAncho" min="0">
+                                </label>
+                                <label>
+                                    Alto (en cm)
+                                    <input type="number" name="hgAlto" min="0">
+                                </label>
+                                <label>
+                                    Material
+                                    <input type="text" name="hgMaterial">
+                                </label>
+                                <label>
+                                    Acabado
+                                    <input type="text" name="hgAcabado">
+                                </label>
+                                <label>
+                                    Diseño o dibujos técnicos
+                                    <input type="file" name="hgDiseño">
+                                </label>
+                            </fieldset>
+                        </div>
+                        <div class="renovadoLlanta hidden">
+                            <fieldset>
+                                <legend>Información para renovado de llanta</legend>
+                                <label>
+                                    Tamaño de la llanta (en cm)
+                                    <input type="number" name="rlTamaño" min="0">
+                                </label>
+                                <label>
+                                    Tipo de vehículo
+                                    <input type="text" name="rlTipoVehiculo">
+                                </label>
+                                <label>
+                                    Tipo de renovado
+                                    <select name="rlTipoRenovado">
+                                        <option value="recauchutado">Recauchutado</option>
+                                        <option value="reesculturado">Reesculturado</option>
+                                    </select>
+                                </label>
+                                <label>
+                                    Marca de la llanta
+                                    <input type="text" name="rlMarca">
+                                </label>
+                            </fieldset>
+                        </div>
+                        <div class="deflectorViento hidden">
+                            <fieldset>
+                                <legend>Información del deflector de viento</legend>
+                                <label>
+                                    Largo (en cm)
+                                    <input type="text" name="dvLargo">
+                                </label>
+                                <label>
+                                    Ancho (en cm)
+                                    <input type="number" name="dvAncho">
+                                </label>
+                                <label>
+                                    Tipo de vehículo
+                                    <input type="text" name="dvTipoVehiculo">
+                                </label>
+                                <label>
+                                    Material
+                                    <input type="text" name="dvMaterial">
+                                </label>
+                                <label>
+                                    Color
+                                    <input type="color" name="dvColor">
+                                </label>
+                                <label>
+                                    Tipo de instalación
+                                    <input type="text" name="dvTipoInstalacion">
+                                </label>
+                            </fieldset>
+                        </div>
+                        <div class="barandal hidden">
+                            <fieldset>
+                                <legend>Información del barandal</legend>
+                                <label>
+                                    Longitud (en m)
+                                    <input type="number" name="baLongitud" min="0">
+                                </label>
+                                <label>
+                                    Altura (en m)
+                                    <input type="number" name="baAltura" min="0">
+                                </label>
+                                <label>
+                                    Material
+                                    <input type="text" name="baMaterial">
+                                </label>
+                                <label>
+                                    Diseño
+                                    <input type="text" name="baDiseño">
+                                </label>
+                                <label>
+                                    Acabado
+                                    <input type="text" name="baAcabado">
+                                </label>
+                            </fieldset>
+                        </div>
+                        <div class="pasamano hidden">
+                            <fieldset>
+                                <legend>Información del pasamano</legend>
+                                <label>
+                                    Longitud (en m)
+                                    <input type="number" name="paLongitud" min="0">
+                                </label>
+                                <label>
+                                    Material
+                                    <input type="text" name="paMaterial">
+                                </label>
+                                <label>
+                                    Diámetro (en cm)
+                                    <input type="number" name="paDiametro" min="0">
+                                </label>
+                                <label>
+                                    Tipo de instalación
+                                    <input type="text" name="paTipoInstalacion">
+                                </label>
+                                <label>
+                                    Acabado
+                                    <input type="text" name="paAcabado">
+                                </label>
+                            </fieldset>
+                        </div>
+                    </section>
+                </fieldset>
+                <fieldset class="metodo-pago">
+                    <legend>Método de pago</legend>
+                    <section class="debito">
+                        <label>
+                            <div class="checkbox-wrapper-31">
+                                <input type="checkbox" name="debito">
+                                <svg viewBox="0 0 35.6 35.6">
+                                    <circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
+                                    <circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
+                                    <polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
+                                </svg>
+                            </div>
+                            Débito
+                        </label>
+                        <fieldset class="datos-debito">
+                            <legend>Datos de la tarjeta</legend>
+                            <label>
+                                Número de tarjeta
+                                <input type="text" name="numeroDebito" pattern="\d{16}">
+                            </label>
+                            <label>
+                                Nombre del titular
+                                <input type="text" name="nombreTitularDebito">
+                            </label>
+                            <label>
+                                Fecha de vencimiento
+                                <input type="month" name="vencimientoDebito" pattern="\d{2}/\d{2}">
+                            </label>
+                            <label>
+                                Código de seguridad (CVV)
+                                <input type="number" name="cvvDebito" min="100" max="999" pattern="\d{3}">
+                            </label>
+                            <label>
+                                Banco emisor
+                                <input type="text" name="bancoEmisorDebito">
+                            </label>
+                            <label>
+                                Tipo de cuenta
+                                <select name="tipoCuentaDebito">
+                                    <option value="ahorros">Ahorros</option>
+                                    <option value="corriente">Corriente</option>
+                                </select>
+                            </label>
+                            <!-- <label>
+                                Correo electrónico:
+                                <input type="email" name="emailDebito" required>
+                            </label> -->
+                        </fieldset>
+                    </section>
+                    <section class="credito">
+                        <label>
+                            <div class="checkbox-wrapper-31">
+                                <input type="checkbox" name="credito">
+                                <svg viewBox="0 0 35.6 35.6">
+                                    <circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
+                                    <circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
+                                    <polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
+                                </svg>
+                            </div>
+                            Crédito
+                        </label>
+                        <fieldset class="datos-credito">
+                            <legend>Datos de la tarjeta</legend>
+                            <label>
+                                Número de tarjeta
+                                <input type="text" name="numeroCredito" pattern="\d{16}">
+                            </label>
+                            <label>
+                                Nombre del titular
+                                <input type="text" name="nombreTitularCredito">
+                            </label>
+                            <label>
+                                Fecha de vencimiento
+                                <input type="month" name="vencimientoCredito" pattern="\d{2}/\d{2}">
+                            </label>
+                            <label>
+                                Código de seguridad (CVV)
+                                <input type="number" name="cvvCredito" min="100" max="999" pattern="\d{3}">
+                            </label>
+                            <label>
+                                Banco emisor
+                                <input type="text" name="bancoEmisorCredito">
+                            </label>
+                            <label>
+                                Tipo de tarjeta
+                                <select name="tipoTarjetaCredito">
+                                    <option value="visa">
+                                        Visa
+                                    </option>
+                                    <option value="mastercard">
+                                        MasterCard
+                                    </option>
+                                    <option value="amex">
+                                        American Express
+                                    </option>
+                                </select>
+                            </label>
+                            <label>
+                                Dirección de facturación
+                                <input type="text" name="direccionFacturacionCredito">
+                            </label>
+                            <!-- <label>
+                                Teléfono de contacto
+                                <input type="tel" name="telefonoCredito" required>
+                            </label> -->
+                        </fieldset>
+                    </section>
+                    <section class="efectivo">
+                        <label for>
+                            <div class="checkbox-wrapper-31">
+                                <input type="checkbox" name="efectivo">
+                                <svg viewBox="0 0 35.6 35.6">
+                                    <circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
+                                    <circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
+                                    <polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
+                                </svg>
+                            </div>
+                            Efectivo
+                        </label>
+                        <fieldset class="datos-efectivo">
+                            <legend>Datos de pago en efectivo</legend>
+                            <label>
+                                Monto a pagar
+                                <input type="number" name="montoEfectivo" min="0">
+                            </label>
+                            <label>
+                                Punto de pago
+                                <input type="text" name="puntoPagoEfectivo">
+                            </label>
+                            <label>
+                                Fecha de pago
+                                <input type="date" name="fechaPagoEfectivo">
+                            </label>
+                            <!-- <label>
+                                Nombre del pagador
+                                <input type="text" name="nombrePagadorEfectivo">
+                            </label> -->
+                            <label>
+                                Documento de identidad
+                                <input type="text" name="documentoIdentidadEfectivo">
+                            </label>
+                            <!-- <label>
+                                Correo electrónico
+                                <input type="email" name="emailEfectivo">
+                            </label>
+                            <label>
+                                Teléfono de contacto
+                                <input type="tel" name="telefonoEfectivo">
+                            </label> -->
+                        </fieldset>
+                    </section>
+                    <label>
+                </fieldset>
+                <fieldset class="datos-servicio">
+                    <legend>Datos del servicio</legend>
+                    <label>
+                        Fecha del servicio <small>(la fecha debe ser mayor o igual a 7 días)</small>
+                        <input type="date" name="fechaServicio" required>
+                    </label>
+                    <label>
+                        Hora del servicio <small>entre las 6 a.m y 8p.m</small>
+                        <input type="time" name="horaServicio" min="06:00" max="20:00" required>
+                    </label>
+                    <label>
+                        Lugar del servicio
+                        <input type="text" name="">
+                    </label>
+                </fieldset>
+                <button type="submit" id="submit">Enviar</button>
             </form>
         </div>
     </main>
     <footer></footer>
     <script src="./JS/componentes reciclables/header.js"></script>
     <script src="./JS/componentes reciclables/footer.js"></script>
-    <link rel="stylesheet" href="./CSS/estilos generales/footer.css">
-    <link rel="stylesheet" href="./CSS/estilos generales/style.css">
-    <link rel="stylesheet" href="./CSS/estilos generales/header.css">
+    <script src="./JS/agendarCita.js"></script>
 </body>
 </html>

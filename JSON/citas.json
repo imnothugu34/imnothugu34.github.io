@@ -1,0 +1,44 @@
+{
+    "citas": [
+        {
+            "fechaCita": "24-04-2024",
+            "finalizado": true,
+            "fechaFinalizacion": "02-05-2024",
+            "cancelado": false,
+            "motivoCancelacion": "",
+            "producto": "Domo",
+            "img": "https://www.grupohm.mx/products/0000_producto_intro/domos.jpg",
+            "alt": "Domo"
+        },
+        {
+            "fechaCita": "24-05-2024",
+            "finalizado": true,
+            "fechaFinalizacion": "02-06-2024",
+            "cancelado": false,
+            "motivoCancelacion": "",
+            "producto": "Puente peatonal",
+            "img": "https://www.grupohm.mx/products/0000_producto_intro/puentes_peatonales.jpg",
+            "alt": "Puente peatonal"
+        },
+        {
+            "fechaCita": "24-06-2024",
+            "finalizado": false,
+            "fechaFinalizacion": "",
+            "cancelado": true,
+            "motivoCancelacion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus cum numquam consequatur! Debitis doloribus illo obcaecati, iste accusantium odit ducimus animi hic sint a numquam cum accusamus recusandae id enim!",
+            "producto": "Nave industrial",
+            "img": "",
+            "alt": "Nave industria"
+        },
+        {
+            "fechaCita": "24-07-2024",
+            "finalizado": false,
+            "fechaFinalizacion": "",
+            "cancelado": false,
+            "motivoCancelacion": "",
+            "producto": "Barandal",
+            "img": "",
+            "alt": "Barandal"
+        }
+    ]
+}

@@ -1,0 +1,303 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 60px;
+}
+
+.container > div{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.container > div > h2{
+    color: #000000b3;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: clamp(24px, 4vw, 50px);
+}
+
+.container > div > p{
+    font-size: clamp(16px, 4vw, 30px);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: clamp(250px, 75%, 1000px);
+    gap: 1rem;
+}
+
+.checkbox-wrapper-31:hover .check{
+    stroke-dashoffset: 0;
+}
+
+.checkbox-wrapper-31{
+    position: relative;
+    display: inline-block;
+    width: clamp(16px, 4vw, 40px);
+    aspect-ratio: 1/1;
+}
+
+.checkbox-wrapper-31 .background{
+    fill: #ccc;
+    transition: ease all 0.6s;
+}
+
+.checkbox-wrapper-31 .stroke{
+    fill: none;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 2px;
+    stroke-dashoffset: 100;
+    stroke-dasharray: 100;
+    transition: ease all 0.6s;
+}
+
+.checkbox-wrapper-31 .check{
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2px;
+    stroke-dashoffset: 22;
+    stroke-dasharray: 22;
+    transition: ease all 0.6s;
+}
+
+.checkbox-wrapper-31 input[type=checkbox]{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    margin: 0;
+    opacity: 0;
+    -appearance: none;
+}
+
+.checkbox-wrapper-31 input[type=checkbox]:hover{
+    cursor: pointer;
+}
+
+.checkbox-wrapper-31 input[type=checkbox]:checked + svg .background{
+    fill: #6cbe45;
+}
+
+.checkbox-wrapper-31 input[type=checkbox]:checked + svg .stroke{
+    stroke-dashoffset: 0;
+}
+
+.checkbox-wrapper-31 input[type=checkbox]:checked + svg .check{
+    stroke-dashoffset: 0;
+}
+
+fieldset {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+legend {
+    font-size: clamp(16px, 4vw, 25px);
+    font-weight: bold;
+    color: #333333;
+}
+
+label {
+    display: flex;
+    flex-direction: row;
+    font-size: clamp(16px, 4vw, 40px);
+    gap: 5px;
+    align-items: flex-start;
+    justify-content: center;
+    font-weight: bold;
+    color: #555555;
+}
+
+input, select, textarea {
+    resize: none;
+    background-color: #f9f9f9;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    &:hover {
+        border-color: #888;
+    }
+    &:focus {
+        border-color: #0056b3;
+        box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
+        outline: none;
+    }
+}
+
+textarea {
+    width: 100%;
+}
+
+option, optgroup{
+    font-size: clamp(12px, 4vw, 16px);
+}
+
+.seleccion-servicio {
+    flex-direction: column;
+}
+
+.especificacion-producto div fieldset{
+    justify-content: center;
+    label {
+        font-size: clamp(16px, 4vw, 24px);
+        flex-grow: 1;
+
+        input, select{
+            width: 100%;
+        }
+    }
+}
+
+.seleccion-servicio {
+    justify-content: center;
+    label {
+        flex-direction: column;
+        align-items: center;
+    }
+    select {
+        font-size: clamp(16px, 4vw, 24px);
+    }
+}
+
+.especificacion-producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.especificacion-producto div.hidden {
+    display: none;
+    transition: display 0.6s, opacity 0.6s, transform 0.6s;
+    transition-behavior: allow-discrete;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.especificacion-producto div {
+    display: flex;
+    transition: display 0.6s 0.7s, opacity 0.6s 0.7s, transform 0.6s 0.7s;
+    transition-behavior: allow-discrete;
+    opacity: 1;
+    transform: scale(1);
+    @starting-style {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+.metodo-pago {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+.metodo-pago section fieldset {
+    display: none;
+    transition: display 0.6s, opacity 0.6s, transform 0.6s;
+    transition-behavior: allow-discrete;
+    justify-content: center;
+    margin: 0 auto;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.metodo-pago section:has(input[type="checkbox"]:checked) fieldset {
+    display: flex;
+    transition: display 0.6s, opacity 0.6s, transform 0.6s;
+    transition-behavior: allow-discrete;
+    opacity: 1;
+    transform: scale(1);
+    @starting-style {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+.metodo-pago section fieldset label {
+    font-size: clamp(12px, 4vw, 16px);
+    flex-direction: column;
+    flex-grow: 1;
+    input, select{
+        font-size: clamp(12px, 4vw, 16px);
+        width: 100%;
+    }
+}
+
+.datos-servicio {
+    justify-content: center;
+
+    label {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        align-items: flex-end;
+        font-weight: bold;
+        color: #555555;
+        font-size: clamp(16px, 4vw, 24px);
+    }
+}
+
+fieldset.datos-servicio input {
+    font-size: clamp(16px, 4vw, 20px);
+    width: clamp(150px, 100%, 750px);
+}
+
+button[type="submit"]:disabled {
+    background-color: #979797;
+    color: #333333;
+}
+
+button[type="submit"] {
+    width: clamp(100px, 50%, 250px);
+    aspect-ratio: 5/1;
+    padding: 10px;
+    margin: 0 auto;
+    border: 0;
+    border-radius: 5px;
+    text-transform: uppercase;
+    background-color: #13375d;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: clamp(16px, 4vw, 24px);
+}
