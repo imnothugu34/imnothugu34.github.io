@@ -123,6 +123,7 @@
 
 .btn-informacion{
     display: inline-block;
+    font-size: clamp(12px, 4w, 20px);
     background: #76D7C4;
     color: #fff;
     padding: 1rem;
@@ -164,6 +165,7 @@
 }
 
 .nuestros-numeros p{
+    text-align: center;
     text-transform: uppercase;
     font-weight: bold;
     font-size: clamp(16px, 2vw, 20px);
